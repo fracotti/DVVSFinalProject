@@ -81,7 +81,7 @@
         });
 
         function createPost() {
-            fetch('http://localhost:3000/posts', {
+            fetch('https://fracotti.github.io/DVVSFinalProject/posts', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -102,7 +102,7 @@
         }
 
         function getPosts() {
-            fetch('http://localhost:3000/posts')
+            fetch('https://fracotti.github.io/DVVSFinalProject/posts')
             .then(response => response.json())
             .then(posts => {
                 renderPostsTable(posts);
@@ -128,7 +128,7 @@
 
         function editPost(postId) {
             // Fetch the post data and populate the popup fields
-            fetch(`http://localhost:3000/posts/${postId}`)
+            fetch(`https://fracotti.github.io/DVVSFinalProject/posts/${postId}`)
             .then(response => response.json())
             .then(post => {
                 document.getElementById('editTitle').value = post.title;
@@ -144,7 +144,7 @@
         }
 
         function saveEditedPost() {
-            fetch(`http://localhost:3000/posts/${document.getElementById('postId').value}`, {
+            fetch(`https://fracotti.github.io/DVVSFinalProject/posts/${document.getElementById('postId').value}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -171,7 +171,7 @@
         }
 
         function deletedPost(postId) {
-            fetch(`http://localhost:3000/posts/${postId}`, {
+            fetch(`https://fracotti.github.io/DVVSFinalProject/${postId}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'
